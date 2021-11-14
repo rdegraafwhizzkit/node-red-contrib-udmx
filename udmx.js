@@ -4,7 +4,7 @@ module.exports = function(RED) {
 	function UDMXNode(config) {
 		RED.nodes.createNode(this, config);
                 this.status({text:'not found', shape:'ring', fill:'red'});
-		var udev = usb.findByIds(0x16c0, 0x5dc);
+		var udev = usb.findByIds(0x0403, 0x6001);
 		udev.open();
 		var node = this;
 		node.status({text:'connected', shape:'dot', fill:'green'});
